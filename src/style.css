@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+#scene {
+    position:relative;
+    height:100%;
+}
+
+body.draw-mode #scene {
+    cursor: url(assets/pen-cursor.png) 2 18, crosshair
+}
+
+body.nav-mode #scene {
+    cursor:grab;
+}
+
+body.zoom-mode #scene {
+    cursor:zoom-in;
+}
+
+body.zoom-mode.negative #scene {
+    cursor:zoom-out;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    /* transition: opacity 1s; */
+}
+
+/* canvas.notready {
+    opacity: 0;
+} */
+
+/************************************************/
+
+#tool-palette {
+    background-color:var(--gridColor);
+    position:fixed;
+    /* left:0px; top:0px; */
+    font-family:sans-serif;
+    border-radius: 5px;
+    overflow:hidden;
+    /* opacity:0; */
+    border:1px solid var(--gridColor);
+    box-shadow: 3px 3px 6px var(--cellColor);
+    user-select: none;
+    transition: opacity 0.25s;
+}
+
+body:hover #tool-palette {
+    opacity:1;
+}
+
+#tool-palette-handlebar {
+    background-color:var(--backgroundColor);
+    color:var(--cellColor);
+    font-size:0.7em;
+    padding:3px 5px;
+    cursor:grab;
+    border-bottom:1Px solid var(--cellColor);
+}
+
+#tool-palette-handlebar:active {
+    cursor:grabbing;
+}
+
+#tool-palette-inner {
+    padding:5px;
+    display:flex;
+    justify-content:center;
+    gap:5px;
+    font-size:0.8em;
+}
+
+#tool-palette-inner button {
+    appearance:none;
+    cursor:pointer;
+    border:1px solid var(--cellColor);
+    background-color: var(--gridColor);
+    border-radius:3px;
+    font-size:0.85em;
+    width:25px;
+    height:25px;
+    padding:0;
+}
+
+#tool-palette-inner button:hover {
+    border-width:2px;
+}
+
+#tool-palette-inner button:active, #tool-palette-inner button.active {
+    background-color: var(--backgroundColor);
+    border-width:2px;
+}
+
+#tool-palette-inner button img {
+    width:16px;
+    margin-top:2px;
+}
+
+/************************************************/
+
+.selection-box {
+    position:fixed;
+    display:none;
+    border:1px dotted var(--cellColor);
+}
+
+.selection-box.active {
+    display:block;
+}

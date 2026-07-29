@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+  <body>
+
+    <div id="scene">
+        <canvas id="main-canvas"></canvas>
+        <canvas id="grid-canvas"></canvas>
+    </div>
+
+    <div id="tool-palette">
+      <div id="tool-palette-handlebar">Cycle : <span id="cycle-number">0</span></div>
+      <div id="tool-palette-inner">
+        <button id="toggle-btn" title="Run / Pause (R key)">▶</button>
+        <button id="draw-btn" title="Draw mode"><img src="src/assets/pen-cursor.png"></button>
+        <button id="nav-btn" title="Navigation mode (or hold Space key)"><img src="src/assets/hand-cursor.png"></button>
+        <button id="zoom-btn" title="Zoom mode - hold Alt key to zoom out (or use mousewheel)"><img src="src/assets/glass-cursor.png"></button>
+      </div>
+    </div>
+    
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
