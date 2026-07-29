@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game of Life</title>
+    <script type="module" crossorigin src="/assets/index-NpDO0hu-.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CTUnEEuw.css">
+  </head>
+  <body>
+
+    <div id="scene">
+        <canvas id="main-canvas"></canvas>
+        <canvas id="grid-canvas"></canvas>
+    </div>
+
+    <div id="tool-palette">
+      <div id="tool-palette-handlebar">Cycle : <span id="cycle-number">0</span></div>
+      <div id="tool-palette-inner">
+        <button id="toggle-btn" title="Run / Pause (R key)">▶</button>
+        <button id="draw-btn" title="Draw mode"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANZJREFUeNqs1A0NhiAQBmBoQAQiEIEIRCCCjYhiBCNoAyLcx7vdu+nm3McP202d8oxD7owZGCLiW8QWzsyOhuRaq+z73m7lmEKJhRAEjznncRQYZhNjDKHEzvMU59wD7EbvaQIrpbyiuqexa88Qbyje4zv8/S7sDb1heQi7owrNY0xzKfZPmmkZpuARY1yGeRzaJZiCG48BrlMY000psYQe6AjmMYGTgbIKsKddmIIRdcgVYaVYIfZUCz71tqXAhqmrAbJ91uXHsETbBa3nstZeMx39J8AAFmm1Pg2JxZ0AAAAASUVORK5CYII="></button>
+        <button id="nav-btn" title="Navigation mode (or hold Space key)"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAW5JREFUeNqUVAtxhDAQDZ0KwAGgAByABHBQCYcCcFCqAAngABxAFRAMEFCQ200TJjBJL/dm3uxOEh6b/YQQAzjnPvALmEnL+B8mYCLXfeICKcbatuXTNAmVJEk4bnVdxxljap05icKhB4qh6/u+EEQfWdc1z7JM+HgGUOP/9O8/DJoUhISz7zuZ5/myOY6jsOu6oqkopRjuAgxtgrsSVKI2FEVBoigiTdOgWG4TdEKapqTve+Efx4FGRPGpCgFmAGI+ZsjTS0G46unHcSyW9AgfEHbieR4py/KSZD2HtuvLFFG9sl2e52c1h2E4fZ1YdeXr52UnmFsFiX0XhqFR9E48h1U2NrOriE7sS8Bw6UPIHSbnp6qqt6stCzjbRm5Rk+BKOYa5bewynFU9+Q75Y69mubZV+U6cbcC3ywMx6FW3RbdtG1Mz7PKELerZeic64yzLqlP9kbgjCAI0v06CLoArX8fN4do1/x/G/D0FGABCu4nK5OTWwwAAAABJRU5ErkJggg=="></button>
+        <button id="zoom-btn" title="Zoom mode - hold Alt key to zoom out (or use mousewheel)"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAWhJREFUeNqkVAGthTAMHMkXgAQkTAIOQAIWcPAdTMJwQFCAhOEACZuD/V6zkkHYe5/3Lmm6lXFrrwWlMsQYa7JfMhfP2MkMWaPeoMrIWnJzCKGepkkty3Ic6rpO9X2vmqYJtB2rqppesoIMaczzHOu6jghdDXFrrWQ8vCJDmR5k2FIW+YtRLkIcz9MzXywfmnnvOQO8hDXgnItt27JnBooL6b5D0mhLhM4Yk9/OWNeVY/B5pogNw8B33PH9kGlpAB1U27Ypagx7QDxVwI3JYpBKU4O2a4ZcWloe66shDsg+ob3L8AQq/8hwHEfea605QwFpKctwp+EuGkKjBxrGUlMMuvZBl12JsMF5dFjmMM/0OofwqChdXBwdrkFISyakMNL1X6Qe5UCjPCPsoaVo/YQU5dv0aV3h8DJIHpFm5Dr9NHQWs1+RFi66JaWvqDxKT0kxcmm8nPoUQorMhAy/QvUNUgNPZH8CDADO92nOD5bg0QAAAABJRU5ErkJggg=="></button>
+      </div>
+    </div>
+    
+  </body>
+</html>
